@@ -11,13 +11,13 @@ if($_POST){
     $authoLastName = $_POST["author_last_name"];
     $publisherName=$_POST['publisher_name'];
     $publisherAddress=$_POST['publisher_address'];
-    //$publishDate = $_POST['publish_date'];
+    $publishDate = $_POST['publish_date'];
     $status = $_POST['media_status'];
 
 
     $uploadError = "";
 
-    $sql = "INSERT INTO medias (title, image, ISBN_code, short_description, type, author_first_name, author_last_name, publisher_name, publisher_address/* , publish_date */, media_status) VALUES ('$title','$image' ,$ISBN , '$description', '$type', '$authorFirstName', '$authoLastName', '$publisherName', '$publisherAddress', /* '$publishDate', */ '$status')";
+    $sql = "INSERT INTO medias (title, image, ISBN_code, short_description, type, author_first_name, author_last_name, publisher_name, publisher_address , publish_date , media_status) VALUES ('$title','$image' ,$ISBN , '$description', '$type', '$authorFirstName', '$authoLastName', '$publisherName', '$publisherAddress', $publishDate, '$status')";
 
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";

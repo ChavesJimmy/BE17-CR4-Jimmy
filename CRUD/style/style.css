@@ -1,0 +1,107 @@
+/*style index*/
+body{
+    padding: 25px;
+    background-color: rgb(250, 208, 152);
+
+}
+h1{
+    font-weight: bold;
+    position:static;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    border: solid 5px;
+    border-radius: 25px;
+    width: 75%;
+}
+.box{
+    gap: 25px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.leftCard{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+}
+.rightCard{
+    border: solid;
+    border-radius: 25px;
+    background-color: white;
+}
+.card-title{
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.imgCard{
+    object-fit: cover;
+    height: 18rem;
+    border-radius: 25px;
+    border: solid;
+
+}
+#card{
+    padding: 15px;
+    border-radius: 25px;
+    border: solid 5px;
+    background-color: whitesmoke;
+}
+
+#buttons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.details, .delete, .update, #create{
+    border: solid 3px;
+    color: black;
+    margin: auto;
+    text-align: center;
+    width: 5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+}
+.details{
+    background-color: rgb(240, 219, 99);
+}
+.delete{
+    background-color: rgb(241, 137, 137);
+}
+.update{
+    background-color: rgb(155, 238, 155);
+}
+#crea{
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 2rem;
+
+}
+#create{
+background-color: coral;
+padding: 25px;
+font-weight: bolder;
+}
+#reserved, #available{
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    border-radius: 25px;
+    font-weight: bold;
+    border: solid 3px;
+}
+#reserved{
+    background-color: red;
+}
+#available{
+    background-color: greenyellow;
+}
