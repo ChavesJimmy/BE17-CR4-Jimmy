@@ -13,7 +13,7 @@ if(mysqli_num_rows($result) > 0){
       <div id='buttons'>
         <a href='details.php?id=".$row['id']."'>Details</a>
         <a href=''>Update</a>
-        <a href=''>Delete</a>
+        <a href='delete.php?id=" .$row['id']."'>Delete</a>
       </div>
     </div>
     <div class='col-md-8 rightCard'>
