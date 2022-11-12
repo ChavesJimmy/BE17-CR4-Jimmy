@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Add Media<br>
-(all fields are mandatory)</h1>
+</h1>
     <form action="./actions/a_create.php" method="post" enctype="multipart/form-data" id=form>
         <label for="name">Title</label>
         <input class="form-control" type="text" name="title" id="title">

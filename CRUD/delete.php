@@ -33,7 +33,7 @@ if ($_GET['id']) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Delete Product</title>
+        <title>Delete Media</title>
         <?php require_once 'components/boot.php'?>
         <style type= "text/css">
             fieldset {
@@ -57,7 +57,7 @@ if ($_GET['id']) {
                 </tr>
             </table>
 
-            <h3 class="mb-4">Do you really want to delete this product?</h3>
+            <h3 class="mb-4">Do you really want to delete this media?</h3>
             <form action ="actions/a_delete.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id ?>" />
                 <input type="hidden" name="image" value="<?php echo $image ?>" />
