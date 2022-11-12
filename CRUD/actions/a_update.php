@@ -15,7 +15,7 @@ if ($_POST) {
     $status = $_POST['media_status'];
     $id = $_POST['id'];  
 
-    $sql = "UPDATE medias SET title= '$title', image='$image' ,ISBN_code = $ISBN, short_description = '$description', type='type', author_first_name='$authorFirstName', author_last_name ='$authorLastName', publisher_name='$publisherName', publisher_address = '$publisherAddress', publish_date = $publishDate, media_status = '$status' WHERE id = {$id}";
+    $sql = "UPDATE medias SET title= '$title', image='$image' ,ISBN_code = $ISBN, short_description = '$description', type ='$type', author_first_name='$authorFirstName', author_last_name ='$authorLastName', publisher_name='$publisherName', publisher_address = '$publisherAddress', publish_date = '$publishDate', media_status = '$status' WHERE id = {$id}";
 
    if (mysqli_query($connect, $sql) === TRUE) {
        $class = "success";

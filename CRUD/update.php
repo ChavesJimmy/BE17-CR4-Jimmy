@@ -35,72 +35,55 @@ if ($_GET['id']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>a_update</title>
     <?php require_once 'components/boot.php'?>
+    <link rel="stylesheet" href="./style/styleForm.css">
 
 </head>
 <body>
-<form action="actions/a_update.php"  method="post" enctype="multipart/form-data">
-               <table class="table">
-                   <tr>
-                       <th>Title</th>
-                       <td><input class="form-control" type="text"  name="title" placeholder ="Product Name" value="<?php echo $title ?>"  /></td>
-                   </tr> 
-                   <tr>
-                       <th>Image</th>
-                       <td><input class="form-control" type="text" name= "image" value="<?php echo $image ?>" /></td>
-                   </tr>
-                   <tr>
-                       <th>Description</th>
-                       <td><input class="form-control" type="text"  name="short_description" placeholder ="Description" value="<?php echo $description ?>"  /></td>
-                   </tr>
-                   <tr>
-                       <th>ISBN code</th>
-                       <td><input class="form-control" type="number"  name="ISBN_code" placeholder ="ISBN code" value="<?php echo $ISBN ?>"  /></td>
-                   </tr>                   <tr>
-                       <th>Type</th>
-                       <td><input class="form-control" type="text"  name="type" placeholder ="type" value="<?php echo $type ?>"  /></td>
-                   </tr>                   <tr>
-                       <th>Author</th>
-                       <td><input class="form-control" type="text"  name="author_first_name" placeholder ="first name" value="<?php echo $authorFirstName ?>"  /></td>
-                       <td><input class="form-control" type="text"  name="author_last_name" placeholder ="last name" value="<?php echo $authorLastName ?>"  /></td>
-                   </tr>                   <tr>
-                       <th>Publisher</th>
-                       <td><input class="form-control" type="text"  name="publisher_name" placeholder ="name" value="<?php echo $publisherName ?>"  /></td>
-                       <td><input class="form-control" type="text"  name="publisher_address" placeholder ="address" value="<?php echo $publisherAddress ?>"  /></td>
-                       <td><input class="form-control" type="date"  name="publish_date" placeholder ="publish date" value="<?php echo $publishDate ?>"  /></td>
-                   </tr>                   <tr>
-                       <th>Status</th>
-                       <td><input class="box"   name="media_status" placeholder ="status" value="<?php echo $status ?>"/>
-                       <datalist>
-                    <option value="available"></option>
-                    <option value="reserved"></option>
-                </datalist></td>
-                   </tr>
-                  
+    <h1>Update Media</h1>
+    <form action="./actions/a_update.php" method="post" enctype="multipart/form-data" id=form>
+        <label for="name">Title</label>
+        <input class="form-control" type="text" name="title" id="title" value="<?php echo $title ?>">
+        <label for="image">Image (link)</label>
+        <input class="form-control" type="text" name="image" id="image" value="<?php echo $image ?>">
+        <label for="price">Short Description</label>
+        <textarea class="form-control" name="short_description" id="description" cols="30" rows="4" ><?php echo $description ?></textarea> 
+        <!--select start-->       
+        <label for="type">Type</label>
+        <select name="type" value="<?php echo $type ?>">
+            <option value="<?php echo $type ?>"><?php echo $type ?></option>
+            <option value="BOOK">BOOK</option>
+            <option value="DVD">DVD</option>
+            <option value="CD">CD</option>
+        </select><br>
+        <!--select end-->
+        <label for="author">Author</label>
+        <input class="form-control" type="text" name="author_first_name" placeholder="first name" id="title" value="<?php echo $authorFirstName ?>">
+        <input class="form-control" type="text" name="author_last_name" placeholder="last name" id="title" value="<?php echo $authorLastName ?>"><br>
+        <label for="publisher">Publisher</label>
+        <input class="form-control" type="text" name="publisher_name" id="pub_name" placeholder="name"  value="<?php echo $publisherName ?>" >
+        <textarea class="form-control" name="publisher_address" id="pub_ad" cols="30" rows="4"  placeholder="address" value="<?php echo $publisherAddress ?>" ><?php echo $publisherAddress ?></textarea><br>
+        <label for="date">Publish date</label>
+        <input class="form-control" type="date" name="publish_date" id="pub_date" placeholder="date of publication" value="<?php echo $publishDate ?>" >
+        <br>
+        <label for="ISBN">ISBN CODE</label>
+        <input class="form-control" type="number" name="ISBN_code" id="ISBN"  value="<?php echo $ISBN ?>"><br>
+         <!--select start-->       
+        <label for="media_status">Status</label>
+        <select name="media_status"  value="<?php echo $status ?>">
+            <option value="<?php echo $status ?>"><?php echo $status ?></option>
+            <option value="available" value="<?php echo $status ?>">AVAILABLE</option>
+            <option value="reserved" value="<?php echo $status ?>">RESERVED</option>
+
+        </select><br>
+        
+        <!--select end-->
+        <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" />
+        <input type= "hidden" name= "image" value= "<?php echo $data['image'] ?>" />
+        <button class="btn btn-success w-25 m-auto" type= "submit">Save Changes</button>
+        <a class="home" href="index.php">Back</a>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                   <tr>
-                       <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" />
-
-                        <input type= "hidden" name= "image" value= "<?php echo $data['image'] ?>" />
-                       <td><button class="btn btn-success" type= "submit">Save Changes</button></td>
-                       <td><a href= "index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
-                   </tr>
-               </table>
-           </form>
+    </form>
 </body>
 </html>

@@ -14,6 +14,7 @@ h1{
     width: 75%;
 }
 form{
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -29,4 +30,15 @@ select{
 }
 :placeholder-shown{
     text-align: center;
+}
+
+.home{
+    background-color: coral;
+    width: 25%;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: solid;
+    text-decoration: none;
+    color: black;
 }

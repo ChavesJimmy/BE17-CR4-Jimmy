@@ -8,24 +8,19 @@ if($_POST){
     $description = $_POST["short_description"];
     $type = $_POST["type"];
     $authorFirstName = $_POST["author_first_name"];
-    $authoLastName = $_POST["author_last_name"];
+    $authorLastName = $_POST["author_last_name"];
     $publisherName=$_POST['publisher_name'];
     $publisherAddress=$_POST['publisher_address'];
     $publishDate = $_POST['publish_date'];
     $status = $_POST['media_status'];
 
-
-    $uploadError = "";
-
-    $sql = "INSERT INTO medias (title, image, ISBN_code, short_description, type, author_first_name, author_last_name, publisher_name, publisher_address , publish_date , media_status) VALUES ('$title','$image' ,$ISBN , '$description', '$type', '$authorFirstName', '$authoLastName', '$publisherName', '$publisherAddress', $publishDate, '$status')";
+    $sql = "INSERT INTO medias (title, image, ISBN_code, short_description, type, author_first_name, author_last_name, publisher_name, publisher_address , publish_date , media_status) VALUES ('$title','$image' ,'$ISBN' , '$description', '$type', '$authorFirstName', '$authorLastName', '$publisherName', '$publisherAddress', '$publishDate', '$status')";
 
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";
         $message = "upload success";
     }else{
-        $class="danger";
-        $message ="Error, something went wrong. Try again!";
-
+        header("location: ../error.php");
     }
     mysqli_close($connect);
 }else{

@@ -1,0 +1,77 @@
+body{
+    padding: 25px;
+
+}
+h1{
+    font-weight: bold;
+    position:static;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    border: solid 5px;
+    border-radius: 25px;
+    width: 75%;
+    background-color: coral;
+
+}
+img{
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 25px;
+}
+.card{
+    border: solid 3px;
+    border-radius: 25px;
+    padding: 2rem;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+
+}
+h5, .author, .publisher, .status{
+    font-weight: bold;
+    font-size: 200%;
+    border: solid;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: left;
+}
+h4{
+    margin-top: 0;
+    text-decoration: underline;
+    text-align: center;}
+
+#available{
+    background-color: greenyellow;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 25px;
+}  
+#reserved{
+    background-color: red;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 25px;
+}  
+a{
+    border: solid 3px;
+    color: black;
+    margin: auto;
+    text-align: center;
+    width: 5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: coral;
+
+}
+a:hover{
+    transform: scale(1.5);
+}
+#button{
+    margin: auto;
+    text-align: center;
+
+}

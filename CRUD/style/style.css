@@ -1,7 +1,6 @@
 /*style index*/
 body{
     padding: 25px;
-    background-color: rgb(250, 208, 152);
 
 }
 h1{
@@ -13,6 +12,13 @@ h1{
     border: solid 5px;
     border-radius: 25px;
     width: 75%;
+    background-color: whitesmoke;
+}
+.descr, .author{
+    border: solid;
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 0.8rem;
 }
 .box{
     gap: 25px;
@@ -97,11 +103,13 @@ font-weight: bolder;
     margin: auto;
     border-radius: 25px;
     font-weight: bold;
-    border: solid 3px;
 }
 #reserved{
     background-color: red;
 }
 #available{
     background-color: greenyellow;
+}
+a:hover{
+    transform: scale(1.1);
 }

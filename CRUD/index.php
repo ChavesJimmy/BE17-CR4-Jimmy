@@ -6,7 +6,7 @@ $tbody = "";
 if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
         $tbody .= "
-        <div id='card' class='card mb-3 col-5'>
+        <div id='card' class='card mb-3 col-sm-10 col-md-5 m-auto'>
   <div class='row g-0'>
     <div class='col-md-6 leftCard'>
       <img src=' ". $row['image'] ."' class='imgCard'>
@@ -18,11 +18,13 @@ if(mysqli_num_rows($result) > 0){
     </div>
     <div class='col-md-5 rightCard'>
       <div class='card-body'>
-        <h5 class='card-title'>Title : " . $row['title'] . "</h5>
-        <p class='card-text'>Description : " . $row['short_description']."</p>
-        <p class='card-text'>Author : ".$row["author_first_name"]." ".$row["author_last_name"]."<br>
+        <h5 class='card-title'>" . $row['title'] . "</h5>
+        <p class='descr'>Description : " . $row['short_description']."</p>
+        <p class='author'>Author : ".$row["author_first_name"]." ".$row["author_last_name"]."<br>
         Type: ".$row['type']."<br>
         </p>
+        <div id='".$row["publisher_name"]."'><a href='publisher.php'>".$row["publisher_name"]."</a></div>
+
         <div id='".$row["media_status"]."'>".$row["media_status"]."</div>
       </div>
     </div>
