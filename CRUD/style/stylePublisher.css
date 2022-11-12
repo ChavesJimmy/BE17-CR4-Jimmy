@@ -1,0 +1,45 @@
+body{
+    padding: 2rem;
+}
+h1{
+    font-weight: bold;
+    position:static;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    border: solid 5px;
+    border-radius: 25px;
+    width: 75%;
+    background-color: whitesmoke;
+}
+.card{
+    margin-top: 2rem;
+    border: solid 3px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 25px;
+    background-color: whitesmoke;
+
+}
+img{
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: solid;
+}
+a{
+    background-color: coral;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: solid;
+    text-decoration: none;
+    color: black;
+}
+.butn{
+    margin: auto;
+    text-align: center;
+}

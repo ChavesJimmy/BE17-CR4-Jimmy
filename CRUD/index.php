@@ -23,7 +23,7 @@ if(mysqli_num_rows($result) > 0){
         <p class='author'>Author : ".$row["author_first_name"]." ".$row["author_last_name"]."<br>
         Type: ".$row['type']."<br>
         </p>
-        <div id='".$row["publisher_name"]."'><a href='publisher.php'>".$row["publisher_name"]."</a></div>
+        <p class='pub'> Publisher :<br><a href='publisher.php?publisher_name=".$row['publisher_name']."'>".$row["publisher_name"]."</a></p>
 
         <div id='".$row["media_status"]."'>".$row["media_status"]."</div>
       </div>
